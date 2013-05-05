@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">cronoCocina</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tomate"></string>
+    <string name="textoComenzar">Comenzar</string>
+    <string name="textoVacio"></string>
+    <string name="txtEsperando">¡La alarma sonará cuando la comida esté lista!</string>
+    <string name="textoMinutosRestantes">Minutos restantes:</string>
+    <string name="txtMinutos">0</string>
+    <string name="txtTiempoPreparacion">"Introduzca el tiempo de preparación: "</string>
+
+</resources>
