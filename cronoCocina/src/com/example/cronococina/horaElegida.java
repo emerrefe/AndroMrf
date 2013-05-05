@@ -1,30 +1,28 @@
 package com.example.cronococina;
 
-import java.util.Calendar;
+//import java.util.Calendar;
 
 import android.app.Activity;
-import android.app.TimePickerDialog;
+//import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
+//import android.util.Log;
 import android.widget.TextView;
-import android.widget.TimePicker;
+//import android.widget.TimePicker;
 
 public class horaElegida extends Activity {
 	
-	private TimePicker timePicker1;
 	private TextView tiempoRestante;
 	
-	private int horaAct;
-	private int minutoAct;
-
 	private String horaU;
 	private String minutoU;
 	private Long LongHoraU;
 	private Long LongMinutoU;
 	private Long sumaMinutos;
 	
-	private Calendar c = Calendar.getInstance();
+	private Long horasQuedan;
+	private Long minutosQuedan;
+	private Long segundosTotales;
 	
 	private CountDownTimer countDownTimer;
 	private long startTime;
@@ -41,8 +39,8 @@ public class horaElegida extends Activity {
 		minutoU = bundle.getString("minutoSeleccionado");
 		
 		LongHoraU = Long.valueOf(horaU)*60;
-		LongMinutoU = Long.valueOf(minutoU);
-		sumaMinutos = (LongHoraU + LongMinutoU)*60;
+		LongMinutoU = Long.valueOf(minutoU) + 1;
+		sumaMinutos = (LongHoraU + LongMinutoU)*60*1000;
 		
 		//cambio el tiempo restante mostrado
 		tiempoRestante = (TextView)findViewById(R.id.textView5);
@@ -74,7 +72,15 @@ public class horaElegida extends Activity {
 
 		@Override
 		public void onTick(long millisUntilFinished) {
-			tiempoRestante.setText("" + millisUntilFinished);
+			/*
+			segundosTotales = millisUntilFinished/1000;
+			minutosQuedan = segundosTotales/60;
+			if(minutosQuedan > 59)
+			horasQuedan = 
+		*/
+			
+			
+			tiempoRestante.setText("" + (millisUntilFinished/1000)/60);
 		}
 
 	}
