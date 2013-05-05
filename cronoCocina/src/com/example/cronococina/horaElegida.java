@@ -77,7 +77,11 @@ public class horaElegida extends Activity {
 			minutosQuedan = segundosTotales/60;
 			if(minutosQuedan > 59)
 			horasQuedan = 
-		*/
+		
+			num=sc.nextInt();  
+	        hor=num/3600;  
+	        min=(num-(3600*hor))/60;  
+	        seg=num-((hor*3600)+(min*60)); */
 			
 			
 			tiempoRestante.setText("" + (millisUntilFinished/1000)/60);
