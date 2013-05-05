@@ -84,6 +84,7 @@ public class horaElegida extends Activity {
 	        seg=num-((hor*3600)+(min*60)); */
 			
 			
+			
 			tiempoRestante.setText("" + (millisUntilFinished/1000)/60);
 		}
 
